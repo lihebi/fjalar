@@ -19,3 +19,6 @@ make ../daikon
 
 make -C ../daikon compile daikon.jar kvasir
 
+cd ../daikon/tests/kvasir-test/ArraysInStructTest
+make clean summary-w-daikon
+
