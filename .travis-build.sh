@@ -23,6 +23,6 @@ cp ArraysInStructTest.dtrace.orig ../daikon/tests/kvasir-tests/ArraysInStructTes
 cd ../daikon/tests/kvasir-tests/ArraysInStructTest
 make clean summary-w-daikon
 ls -l daikon-output
-diff -u5 ArraysInStructTest.dtrace.orig daikon-output/ArraysInStructTest.dtrace.orig
 cat daikon-output/ArraysInStructTest.dtrace.orig
+diff -u5 ArraysInStructTest.dtrace.orig daikon-output/ArraysInStructTest.dtrace.orig
 
