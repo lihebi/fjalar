@@ -19,10 +19,5 @@ make ../daikon
 
 make -C ../daikon compile daikon.jar kvasir
 
-cp ArraysInStructTest.dtrace.orig ../daikon/tests/kvasir-tests/ArraysInStructTest
-cd ../daikon/tests/kvasir-tests/ArraysInStructTest
-make clean summary-w-daikon
-ls -l daikon-output
-cat daikon-output/ArraysInStructTest.dtrace.orig
-diff -u5 ArraysInStructTest.dtrace.orig daikon-output/ArraysInStructTest.dtrace.orig
+make daikon-test
 
