@@ -20,8 +20,8 @@ make ../daikon
 date
 make -C ../daikon compile daikon.jar kvasir
 date
-make -C ../daikon/tests/kvasir-tests nightly-summary-w-daikon
+make -C ../daikon/tests/kvasir-tests nightly-summary-w-daikon >test.log
 date
-make -C ../daikon/tests/kvasir-tests --no-print-directory results
-date
-
+cat test.log
+grep FAILED test.log > travis-fail
+diff travis-fail travis-fail.goal
