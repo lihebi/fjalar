@@ -15,9 +15,13 @@ ls -l /lib/x86_64-linux-gnu/libc-*
 # TODO: The tests ought to work even if $DAIKONDIR is not set.
 export DAIKONDIR=`pwd`/../daikon
 
+date
 make ../daikon
-
+date
 make -C ../daikon compile daikon.jar kvasir
-
-make daikon-test
+date
+make -C ../daikon/tests/kvasir-tests nightly-summary-w-daikon
+date
+make -C ../daikon/tests/kvasir-tests --no-print-directory results
+date
 
