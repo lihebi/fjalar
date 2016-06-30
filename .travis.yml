@@ -1,6 +1,6 @@
 language: c
 
-script: ./.travis-build.sh
+script: travis_wait ./.travis-build.sh
 
 # Version for Ubuntu 14.04 Trusty.
 sudo: required
