@@ -15,12 +15,7 @@ ls -l /lib/x86_64-linux-gnu/libc-*
 # TODO: The tests ought to work even if $DAIKONDIR is not set.
 export DAIKONDIR=`pwd`/../daikon
 
-date
-make ../daikon
-date
-make -C ../daikon compile daikon.jar kvasir
-date
-make -C ../daikon/tests/kvasir-tests nightly-summary-w-daikon 2>&1 | tee test.log
-date
+make daikon-test 2>&1 | tee test.log
+
 grep FAILED test.log > travis-fail
 diff travis-fail travis-fail.goal
